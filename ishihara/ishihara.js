@@ -42,6 +42,7 @@ document.addEventListener('DOMContentLoaded', function() {
     background_color: '#FFFFFF',
     n_colors_on: 3,
     n_colors_off: 6,
+    n_colors_CBON: 3,
     color_on0: '#F9BB82',
     color_on1: '#EBA170',
     color_on2: '#FCCD84',
@@ -54,6 +55,12 @@ document.addEventListener('DOMContentLoaded', function() {
     color_off3: '#D7DAAA',
     color_off4: '#E5D57D',
     color_off5: '#D1D6AF',
+    color_CBON0: '#F9BB82',
+    color_CBON1: '#EBA170',
+    color_CBON2: '#FCCD84',
+    color_CBON3: '#000000',
+    color_CBON4: '#000000',
+    color_CBON5: '#000000',
     min_radius: (canvas.width + canvas.height) / 600,
     max_radius: (canvas.width + canvas.height) / 150,
     draw_ratio: 1,
@@ -140,6 +147,7 @@ document.addEventListener('DOMContentLoaded', function() {
     for (var i = 0; i < 6; i++) {
       hide_gui_element(colors_on_folder, 'color_on' + i, i >= ishihara_input.n_colors_on);
       hide_gui_element(colors_off_folder, 'color_off' + i, i >= ishihara_input.n_colors_off);
+      hide_gui_element(colors_CBON_folder, 'color_CBON' + i, i >= ishihara_input.n_colors_CBON);
     }
   }
 
@@ -149,6 +157,7 @@ document.addEventListener('DOMContentLoaded', function() {
         "General 1": [{
           n_colors_on: 3,
           n_colors_off: 6,
+          n_colors_CBON: 6,
           color_on0: '#F9BB82',
           color_on1: '#EBA170',
           color_on2: '#FCCD84',
@@ -157,7 +166,10 @@ document.addEventListener('DOMContentLoaded', function() {
           color_off2: '#BBB964',
           color_off3: '#D7DAAA',
           color_off4: '#E5D57D',
-          color_off5: '#D1D6AF'
+          color_off5: '#D1D6AF',
+          color_CBON0: '#F9BB82',
+          color_CBON1: '#EBA170',
+          color_CBON2: '#FCCD84',
         }],
         'General 2': [{
           n_colors_on: 5,
@@ -246,12 +258,17 @@ document.addEventListener('DOMContentLoaded', function() {
   gui.add(ishihara_input, 'n_colors_off', 1, 6, 1).name("Colors off").onChange(function() {
     set_colors_folders();
   });
+    gui.add(ishihara_input, 'n_colors_CBON', 1, 6, 1).name("Colors CBON").onChange(function() {
+    set_colors_folders();
+  });
 
   var colors_on_folder = gui.addFolder('Colors on');
   var colors_off_folder = gui.addFolder('Colors off');
+  var colors_CBON_folder = gui.addFolder('CBON');
   for (var i = 0; i < 6; i++) {
     colors_on_folder.addColor(ishihara_input, 'color_on' + i).name(i + 1);
     colors_off_folder.addColor(ishihara_input, 'color_off' + i).name(i + 1);
+    colors_CBON_folder.addColor(ishihara_input, 'color_CBON' + i).name(i + 1);
   }
 
   gui.add(ishihara_input, 'min_radius', 2, 50).name("Min radius").onChange(function() {
