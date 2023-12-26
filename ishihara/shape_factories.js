@@ -37,7 +37,7 @@ CircleFactory.prototype.overlaps_image = function(img_data, circle) {
       var g = img_data.data[index + 1];
       var b = img_data.data[index + 2];
       var a = img_data.data[index + 3];
-
+      debugger
       if ((r + g + b) * (a / 255) < 127) {
         points_overlapping++;
       }
@@ -116,7 +116,7 @@ RegularPolygonFactory.prototype.overlaps_image = function(img_data, polygon) {
     var g = img_data.data[index + 1];
     var b = img_data.data[index + 2];
     var a = img_data.data[index + 3];
-
+    debugger
     if ((r + g + b) * (a / 255) < 127) {
       points_overlapping++;
     }
