@@ -167,9 +167,9 @@ document.addEventListener('DOMContentLoaded', function() {
           color_off3: '#D7DAAA',
           color_off4: '#E5D57D',
           color_off5: '#D1D6AF',
-          color_CBON0: '#F9BB82',
-          color_CBON1: '#EBA170',
-          color_CBON2: '#FCCD84',
+          color_CBON0: '#A9BB82',
+          color_CBON1: '#CBA170',
+          color_CBON2: '#BCCD84',
         }],
         'General 2': [{
           n_colors_on: 5,
