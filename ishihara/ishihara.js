@@ -325,7 +325,7 @@ document.addEventListener('DOMContentLoaded', function() {
   };
   canvas.addEventListener('mousedown', function(e) {
     if (e.button === 0) {
-      mousedown(e.offsetX * PIXEL_RATIO, e.offsetY * PIXEL_RATIO, e.ctrlKey ? '#F00' : (e.shiftKey ? '#0F0' :'#00F'));
+      mousedown(e.offsetX * PIXEL_RATIO, e.offsetY * PIXEL_RATIO, e.ctrlKey ? '#FFF' : (e.shiftKey ? '#0F0' :'#00F'));
     }
   });
   canvas.addEventListener('touchstart', function(e) {
@@ -350,7 +350,7 @@ document.addEventListener('DOMContentLoaded', function() {
   };
   canvas.addEventListener('mouseup', function(e) {
     if (e.button === 0) {
-      mouseup(e.offsetX * PIXEL_RATIO, e.offsetY * PIXEL_RATIO, e.ctrlKey ? '#F00' : (e.shiftKey ? '#0F0' :'#00F'));
+      mouseup(e.offsetX * PIXEL_RATIO, e.offsetY * PIXEL_RATIO, e.ctrlKey ? '#FFF' : (e.shiftKey ? '#0F0' :'#00F'));
     }
   });
   canvas.addEventListener('touchend', function(e) {
@@ -372,7 +372,7 @@ document.addEventListener('DOMContentLoaded', function() {
     y = curr_y;
   };
   canvas.addEventListener('mousemove', function(e) {
-    mousemove(e.offsetX * PIXEL_RATIO, e.offsetY * PIXEL_RATIO, e.ctrlKey ? '#F00' : (e.shiftKey ? '#0F0' :'#00F'));
+    mousemove(e.offsetX * PIXEL_RATIO, e.offsetY * PIXEL_RATIO, e.ctrlKey ? '#FFF' : (e.shiftKey ? '#0F0' :'#00F'));
   });
   canvas.addEventListener('touchmove', function(e) {
     var rect = canvas.getBoundingClientRect();
