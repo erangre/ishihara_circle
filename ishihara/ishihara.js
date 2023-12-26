@@ -325,7 +325,7 @@ document.addEventListener('DOMContentLoaded', function() {
   };
   canvas.addEventListener('mousedown', function(e) {
     if (e.button === 0) {
-      mousedown(e.offsetX * PIXEL_RATIO, e.offsetY * PIXEL_RATIO, e.ctrlKey ? '#FFF' : (e.shiftKey ? '#0F0' :'#000'));
+      mousedown(e.offsetX * PIXEL_RATIO, e.offsetY * PIXEL_RATIO, e.ctrlKey ? '#FFF' : (e.altKey ? '#0F0' :'#000'));
     }
   });
   canvas.addEventListener('touchstart', function(e) {
