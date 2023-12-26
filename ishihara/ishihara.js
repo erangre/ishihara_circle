@@ -350,7 +350,7 @@ document.addEventListener('DOMContentLoaded', function() {
   };
   canvas.addEventListener('mouseup', function(e) {
     if (e.button === 0) {
-      mouseup(e.offsetX * PIXEL_RATIO, e.offsetY * PIXEL_RATIO, e.ctrlKey ? '#FFF' : '#000');
+      mouseup(e.offsetX * PIXEL_RATIO, e.offsetY * PIXEL_RATIO, e.ctrlKey ? '#FFF' : (e.altKey ? '#0F0' :'#000'));
     }
   });
   canvas.addEventListener('touchend', function(e) {
@@ -372,7 +372,7 @@ document.addEventListener('DOMContentLoaded', function() {
     y = curr_y;
   };
   canvas.addEventListener('mousemove', function(e) {
-    mousemove(e.offsetX * PIXEL_RATIO, e.offsetY * PIXEL_RATIO, e.ctrlKey ? '#FFF' : '#000');
+    mousemove(e.offsetX * PIXEL_RATIO, e.offsetY * PIXEL_RATIO, e.ctrlKey ? '#FFF' : (e.altKey ? '#0F0' :'#000'));
   });
   canvas.addEventListener('touchmove', function(e) {
     var rect = canvas.getBoundingClientRect();
