@@ -23,6 +23,7 @@ CircleFactory.prototype.generate = function(circular_area) {
 CircleFactory.prototype.overlaps_image = function(img_data, circle) {
   var total_points = 0;
   var points_overlapping = 0;
+  var points_overlapping_CB = 0;
 
   for (var i = 0; i <= circle.radius; i++) {
     for (var radius = 0; radius <= circle.radius; radius++) {
@@ -38,7 +39,7 @@ CircleFactory.prototype.overlaps_image = function(img_data, circle) {
       var b = img_data.data[index + 2];
       var a = img_data.data[index + 3];
       debugger
-      if ((r + g + b) * (a / 255) < 127) {
+      if (b * (a / 255) < 127) {
         points_overlapping++;
       }
     }
