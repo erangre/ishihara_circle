@@ -39,7 +39,7 @@ CircleFactory.prototype.overlaps_image = function(img_data, circle) {
       var b = img_data.data[index + 2];
       var a = img_data.data[index + 3];
       debugger
-      if (b>127) {
+      if (b>1) {
         points_overlapping++;
       }
     }
