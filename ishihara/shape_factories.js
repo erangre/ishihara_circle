@@ -42,9 +42,9 @@ CircleFactory.prototype.overlaps_image = function(img_data, circle) {
       if ((r*a/255<127)) {
         points_overlapping++;
       }
-      if ((r*a/255<127)&&(b*a/255<127)) {
-        points_overlapping_CB++;
-      }
+      // if ((r*a/255<127)&&(b*a/255<127)) {
+      //  points_overlapping_CB++;
+      //}
     }
   }
 
