@@ -53,9 +53,9 @@ onmessage = function(e) {
         if (overlaps_image && points_overlapping !== total_points) {
           continue outer;
         }
-       // if (overlaps_image_CB && points_overlapping_CB !== total_points) {
-      //    continue outer;
-      //  }
+        // if (overlaps_image_CB && points_overlapping_CB !== total_points) {
+        //    continue outer;
+        //  }
       } else if (overlaps_image) {
         break;
       }
@@ -68,7 +68,7 @@ onmessage = function(e) {
         var style = options['color_on' + Math.floor(Math.random() * options.n_colors_on)];
       }
       //if (overlaps_image_CB && points_overlapping_CB !== total_points) {
-         // var style = options['color_CBON' + Math.floor(Math.random() * options.n_colors_CBON)];
+      // var style = options['color_CBON' + Math.floor(Math.random() * options.n_colors_CBON)];
       //  }
     } else {
       var style = options['color_off' + Math.floor(Math.random() * options.n_colors_off)];
