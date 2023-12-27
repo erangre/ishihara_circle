@@ -42,10 +42,13 @@ CircleFactory.prototype.overlaps_image = function(img_data, circle) {
       if ((r*a/255<127)&&(g*a/255<127)) {
         points_overlapping++;
       }
+      if ((r*a/255<127)&&(b*a/255<127)) {
+        points_overlapping_CB++;
+      }
     }
   }
 
-  return [total_points, points_overlapping];
+  return [total_points, points_overlapping, points_overlapping_CB];
 };
 
 CircleFactory.prototype.intersects = function(circle1, circle2) {
