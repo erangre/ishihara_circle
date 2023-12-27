@@ -44,6 +44,7 @@ onmessage = function(e) {
       var overlap = shape_factory.overlaps_image(options.img_data, shapes[i]);
       var total_points = overlap[0];
       var points_overlapping = overlap[1];
+      var points_overlapping_CB = overlap[2];
 
       overlaps_image = points_overlapping !== 0;
 
