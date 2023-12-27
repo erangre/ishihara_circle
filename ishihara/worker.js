@@ -44,18 +44,18 @@ onmessage = function(e) {
       var overlap = shape_factory.overlaps_image(options.img_data, shapes[i]);
       var total_points = overlap[0];
       var points_overlapping = overlap[1];
-      var points_overlapping_CB = overlap[2];
+      // var points_overlapping_CB = overlap[2];
 
       overlaps_image = points_overlapping !== 0;
-      overlaps_image_CB = points_overlapping_CB !==0;
+     // overlaps_image_CB = points_overlapping_CB !==0;
 
       if (options.edge_detection) {
         if (overlaps_image && points_overlapping !== total_points) {
           continue outer;
         }
-        if (overlaps_image_CB && points_overlapping_CB !== total_points) {
-          continue outer;
-        }
+       // if (overlaps_image_CB && points_overlapping_CB !== total_points) {
+      //    continue outer;
+      //  }
       } else if (overlaps_image) {
         break;
       }
@@ -67,9 +67,9 @@ onmessage = function(e) {
       if (overlaps_image && points_overlapping !== total_points) {
         var style = options['color_on' + Math.floor(Math.random() * options.n_colors_on)];
       }
-      if (overlaps_image_CB && points_overlapping_CB !== total_points) {
-          var style = options['color_CBON' + Math.floor(Math.random() * options.n_colors_CBON)];
-        }
+      //if (overlaps_image_CB && points_overlapping_CB !== total_points) {
+         // var style = options['color_CBON' + Math.floor(Math.random() * options.n_colors_CBON)];
+      //  }
     } else {
       var style = options['color_off' + Math.floor(Math.random() * options.n_colors_off)];
     }
