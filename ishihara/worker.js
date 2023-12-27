@@ -47,9 +47,13 @@ onmessage = function(e) {
       var points_overlapping_CB = overlap[2];
 
       overlaps_image = points_overlapping !== 0;
+      overlaps_image_CB = points_overlapping_CB !==0;
 
       if (options.edge_detection) {
         if (overlaps_image && points_overlapping !== total_points) {
+          continue outer;
+        }
+        if (overlaps_image_CB && points_overlapping_CB !== total_points) {
           continue outer;
         }
       } else if (overlaps_image) {
@@ -60,7 +64,12 @@ onmessage = function(e) {
     tries = 0;
 
     if (overlaps_image !== options.invert_colors) {
-      var style = options['color_on' + Math.floor(Math.random() * options.n_colors_on)];
+      if (overlaps_image && points_overlapping !== total_points) {
+        var style = options['color_on' + Math.floor(Math.random() * options.n_colors_on)];
+      }
+      if (overlaps_image_CB && points_overlapping_CB !== total_points) {
+          var style = options['color_cbon' + Math.floor(Math.random() * options.n_colors_cbon)];
+        }
     } else {
       var style = options['color_off' + Math.floor(Math.random() * options.n_colors_off)];
     }
