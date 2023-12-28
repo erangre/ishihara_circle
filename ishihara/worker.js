@@ -53,9 +53,9 @@ onmessage = function(e) {
         if (overlaps_image && points_overlapping !== total_points) {
           continue outer;
         }
-        // if (overlaps_image_CB && points_overlapping_CB !== total_points) {
-        //    continue outer;
-        //  }
+        if (overlaps_image_CB && points_overlapping_CB !== total_points) {
+           continue outer;
+        }
       } else if (overlaps_image) {
         break;
       }
