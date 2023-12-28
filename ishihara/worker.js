@@ -63,15 +63,15 @@ onmessage = function(e) {
 
     tries = 0;
 
-    if (overlaps_image !== options.invert_colors) {
+    //if (overlaps_image !== options.invert_colors) {
       if (points_overlapping >= points_overlapping_CB) {
         var style = options['color_on' + Math.floor(Math.random() * options.n_colors_on)];
       } else {
         var style = options['color_CBON' + Math.floor(Math.random() * options.n_colors_CBON)];
       }
-    } else {
-      var style = options['color_off' + Math.floor(Math.random() * options.n_colors_off)];
-    }
+    //} else {
+      //var style = options['color_off' + Math.floor(Math.random() * options.n_colors_off)];
+   // }
 
     for (var i = 0; i < shapes.length; i++) {
       postMessage({action: 'shape', shape: shapes[i], style: style});
