@@ -64,7 +64,7 @@ onmessage = function(e) {
     tries = 0;
 
     if (overlaps_image !== options.invert_colors) {
-      if (points_overlapping > points_overlapping_CB) {
+      if (points_overlapping >= points_overlapping_CB) {
         var style = options['color_on' + Math.floor(Math.random() * options.n_colors_on)];
       } else {
         var style = options['color_CBON' + Math.floor(Math.random() * options.n_colors_CBON)];
